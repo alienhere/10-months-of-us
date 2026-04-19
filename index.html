@@ -6,176 +6,144 @@
     <title>10 Months of Us ❤️</title>
     <style>
         :root {
-            --berry-pink: #ff85a2;
-            --soft-cream: #fff5f7;
-            --boba-brown: #4e342e;
+            --pink: #ff85a2;
+            --dark-pink: #d63384;
+            --soft-bg: #fff5f7;
         }
 
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--soft-cream);
-            color: #444;
-            overflow-x: hidden;
+            background-color: var(--soft-bg);
+            font-family: 'Helvetica Neue', sans-serif;
             text-align: center;
+            color: #333;
         }
 
-        /* Floating Boba Elements */
-        .boba-float {
-            position: fixed;
-            font-size: 2rem;
-            z-index: -1;
-            animation: float 6s infinite ease-in-out;
-            opacity: 0.6;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(20deg); }
-        }
-
-        /* Header Section */
         header {
-            padding: 50px 20px;
-            background: linear-gradient(135deg, #ff85a2 0%, #ffafbd 100%);
-            color: white;
-            border-bottom-left-radius: 50% 20px;
-            border-bottom-right-radius: 50% 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 40px 20px;
+            background: linear-gradient(180deg, #ffafbd, var(--soft-bg));
         }
 
-        h1 { font-size: 3rem; margin: 0; }
-        .subtitle { font-style: italic; opacity: 0.9; }
-
+        h1 { color: var(--dark-pink); margin: 0; font-size: 2rem; }
+        
         /* The Reel Frame */
         .reel-container {
             width: 300px;
             height: 530px;
-            margin: 40px auto;
-            border: 8px solid #333;
-            border-radius: 30px;
+            margin: 20px auto;
+            border: 8px solid #1a1a1a;
+            border-radius: 35px;
             position: relative;
             background: #000;
             overflow: hidden;
             box-shadow: 0 20px 40px rgba(0,0,0,0.2);
         }
 
-        .reel-placeholder {
+        .reel-container img {
+            width: 100%;
             height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            flex-direction: column;
-            background: linear-gradient(to bottom, #222, #000);
+            object-fit: cover;
         }
 
-        /* Letter Section */
-        .letter-box {
-            max-width: 600px;
-            margin: 40px auto;
-            padding: 30px;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(255, 133, 162, 0.2);
-            line-height: 1.8;
-            font-size: 1.1rem;
-            position: relative;
-        }
-
-        .letter-box::before {
-            content: "🍓";
+        .reel-ui {
             position: absolute;
-            top: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 2rem;
+            bottom: 30px;
+            right: 15px;
+            color: white;
+            font-size: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
         }
 
-        /* Buttons */
+        /* The Paragraph Box */
+        .letter {
+            max-width: 85%;
+            margin: 30px auto;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 133, 162, 0.3);
+            line-height: 1.6;
+            font-weight: bold;
+            color: #444;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
         .btn {
-            background-color: var(--berry-pink);
+            background: var(--pink);
             color: white;
             border: none;
-            padding: 15px 30px;
+            padding: 15px 35px;
             border-radius: 50px;
             font-weight: bold;
+            font-size: 1rem;
             cursor: pointer;
-            transition: transform 0.2s;
-            margin: 10px;
+            margin-bottom: 50px;
+            box-shadow: 0 5px 15px rgba(255, 133, 162, 0.4);
         }
 
-        .btn:hover { transform: scale(1.1); background-color: #ff6384; }
-
-        .confetti-container {
+        /* Floating Boba Icons */
+        .boba {
             position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            pointer-events: none;
-            z-index: 100;
+            z-index: -1;
+            opacity: 0.6;
+            animation: float 5s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
         }
     </style>
 </head>
 <body>
 
+    <div class="boba" style="top:10%; left:5%; font-size: 3rem;">🧋</div>
+    <div class="boba" style="top:40%; right:5%; font-size: 2.5rem;">🍓</div>
+
     <header>
-        <h1>Happy 10 Months!</h1>
-        <p class="subtitle">To my favorite person & boba partner 🧋✨</p>
+        <h1>Happy 10 Months, My Jaan! ❤️</h1>
     </header>
 
-    <div class="boba-float" style="top: 10%; left: 5%;">🧋</div>
-    <div class="boba-float" style="top: 40%; right: 8%;">🍓</div>
-    <div class="boba-float" style="bottom: 20%; left: 10%;">💖</div>
-
     <div class="reel-container">
-        <div class="reel-placeholder">
-            <p>🎬 <i>Place your favorite Reel or Photo here!</i></p>
-            <div style="font-size: 0.8rem; padding: 20px;">
-                (In the code, replace this div with an &lt;img&gt; or &lt;video&gt; tag)
-            </div>
-            <div style="position: absolute; bottom: 20px; right: 15px;">❤️ 💬 ✈️</div>
+        <img src="anniversary.jpg" alt="Our Picture">
+        <div class="reel-ui">
+            <span>❤️</span>
+            <span>💬</span>
+            <span>✈️</span>
         </div>
     </div>
 
-    <div class="letter-box">
-        <p>
-            MERI JAAN ITS BEEN 10 MONTHS I LOVE YOU SO FUCKING MUCH THERE ARE YEARS TO COME AND WE WILL HAVE SO MUCH FUN AND THESE ARE THE BEST 10 MONTHS OF MY LIFE AND TOGETHER WE WILL KEEP ON GROWING AND LOVING MORE AND MORE AND MORE I LOVE US I JUST LOVE US AND THIS IS EVERTHING FOR ME AND ALL OF THIS IS A DREAM COME TRUE I WILL KEEP MAKING YOU HAPPPPYYYYYYY AND ALSO PARESHAN KARUNGAAA APNI PYAARI SI BADMAS KOO I LOVEEE YOU MERI JAAN JITNAAA BOLUUU UTNAA KAM HAI BCOZ MY LOVE FOR YOU IS JUSTTTTTTTTT INFINITE AND I LOVE YOU I WILL FULFIL ALL OUR DREAMS I PROMISE TO GIVE YOU THAT LIFE THAT MY PUCCHI DESERVES AND I JUST LOVE YOU WE WILL KEEP WORKING HARD MUAHHHHHHHHH MERI PYAARI BIWII
-        </p>
+    <div class="letter">
+        MERI JAAN ITS BEEN 10 MONTHS I LOVE YOU SO FUCKING MUCH THERE ARE YEARS TO COME AND WE WILL HAVE SO MUCH FUN AND THESE ARE THE BEST 10 MONTHS OF MY LIFE AND TOGETHER WE WILL KEEP ON GROWING AND LOVING MORE AND MORE AND MORE I LOVE US I JUST LOVE US AND THIS IS EVERTHING FOR ME AND ALL OF THIS IS A DREAM COME TRUE I WILL KEEP MAKING YOU HAPPPPYYYYYYY AND ALSO PARESHAN KARUNGAAA APNI PYAARI SI BADMAS KOO I LOVEEE YOU MERI JAAN JITNAAA BOLUUU UTNAA KAM HAI BCOZ MY LOVE FOR YOU IS JUSTTTTTTTTT INFINITE AND I LOVE YOU I WILL FULFIL ALL OUR DREAMS I PROMISE TO GIVE YOU THAT LIFE THAT MY PUCCHI DESERVES AND I JUST LOVE YOU WE WILL KEEP WORKING HARD MUAHHHHHHHHH MERI PYAARI BIWII
     </div>
 
-    <div>
-        <button class="btn" onclick="celebrate()">Click for a Surprise 🍓</button>
-    </div>
-
-    <div id="confetti-holder" class="confetti-container"></div>
+    <button class="btn" onclick="rain()">Tap for a surprise 🍓</button>
 
     <script>
-        function celebrate() {
-            const holder = document.getElementById('confetti-holder');
-            for (let i = 0; i < 50; i++) {
-                const heart = document.createElement('div');
-                heart.innerHTML = Math.random() > 0.5 ? '💗' : '🍓';
-                heart.style.position = 'fixed';
-                heart.style.left = Math.random() * 100 + 'vw';
-                heart.style.top = '100vh';
-                heart.style.fontSize = (Math.random() * 20 + 20) + 'px';
-                heart.style.zIndex = '1000';
+        function rain() {
+            for(let i=0; i<50; i++) {
+                const item = document.createElement('div');
+                item.innerHTML = ['🍓','🧋','❤️','💖'][Math.floor(Math.random()*4)];
+                item.style.position = 'fixed';
+                item.style.left = Math.random() * 100 + 'vw';
+                item.style.top = '-50px';
+                item.style.fontSize = '2rem';
+                item.style.zIndex = '1000';
+                document.body.appendChild(item);
                 
-                const animation = heart.animate([
-                    { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
-                    { transform: `translateY(-100vh) rotate(${Math.random() * 360}deg)`, opacity: 0 }
-                ], {
-                    duration: Math.random() * 3000 + 2000,
-                    easing: 'ease-out'
-                });
-
-                holder.appendChild(heart);
-                animation.onfinish = () => heart.remove();
+                item.animate([
+                    { transform: 'translateY(0) rotate(0deg)' },
+                    { transform: `translateY(110vh) rotate(${Math.random()*360}deg)` }
+                ], { duration: 2000 + Math.random()*2000 });
+                
+                setTimeout(() => item.remove(), 4000);
             }
         }
-        
-        // Auto-celebrate on load
-        window.onload = () => setTimeout(celebrate, 1000);
     </script>
 </body>
 </html>
